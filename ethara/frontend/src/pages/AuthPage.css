@@ -1,0 +1,20 @@
+.auth-wrap { min-height:100vh; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; padding:20px; }
+.auth-bg { position:fixed; inset:0; pointer-events:none; }
+.orb { position:absolute; border-radius:50%; filter:blur(90px); opacity:0.35; }
+.orb1 { width:500px;height:500px; background:radial-gradient(var(--violet),transparent); top:-150px;left:-100px; animation:float 9s ease-in-out infinite; }
+.orb2 { width:400px;height:400px; background:radial-gradient(var(--cyan),transparent); bottom:-120px;right:-80px; animation:float 11s ease-in-out infinite reverse; }
+.grid-bg { position:absolute;inset:0; background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px); background-size:50px 50px; }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-28px)} }
+
+.auth-box { position:relative;z-index:1; width:100%;max-width:400px; background:var(--card); border:1px solid var(--border2); border-radius:var(--r-xl); padding:36px; box-shadow:var(--shadow),0 0 0 1px rgba(255,255,255,0.02); text-align:center; }
+.auth-brand { display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:4px; }
+.brand-mark { width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--cyan),var(--violet));display:flex;align-items:center;justify-content:center;font-family:var(--ff-display);font-weight:800;font-size:18px;color:#070711; }
+.brand-name { font-family:var(--ff-display);font-size:22px;font-weight:800;background:linear-gradient(135deg,var(--cyan),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
+.auth-tagline { font-size:12px;color:var(--text2);margin-bottom:28px;letter-spacing:0.05em; }
+
+.auth-form { text-align:left;display:flex;flex-direction:column;gap:14px; }
+.auth-form h2 { font-family:var(--ff-display);font-size:20px;font-weight:700; }
+.auth-sub { font-size:13px;color:var(--text2);margin-top:-8px;margin-bottom:4px; }
+.field { display:flex;flex-direction:column;gap:5px; }
+.auth-submit { width:100%;padding:11px;font-size:14px;margin-top:4px; }
+.auth-switch { margin-top:20px;font-size:12px;color:var(--text2); }

@@ -1,0 +1,14 @@
+{
+  "name": "ethara-team-task-manager",
+  "version": "1.0.0",
+  "description": "Ethara.AI Full Stack Assessment — Team Task Manager",
+  "scripts": {
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && cross-env PORT=3000 npm start\"",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "build": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "cross-env": "^7.0.3"
+  }
+}
