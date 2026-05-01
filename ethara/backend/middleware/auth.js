@@ -2,6 +2,11 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const Project = require('../models/Project');
 
+const JWT_SECRET = process.env.JWT_SECRET || 'ethara_default_jwt_secret_change_me';
+if (!process.env.JWT_SECRET) {
+  console.warn('⚠️ JWT_SECRET is not set. Using fallback secret. Set JWT_SECRET in production to secure tokens.');
+}
+
 // Verify JWT
 const protect = async (req, res, next) => {
   try {
@@ -65,6 +70,6 @@ const projectAdmin = async (req, res, next) => {
   }
 };
 
-const generateToken = (id) => jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' });
+const generateToken = (id) => jwt.sign({ id }, JWT_SECRET, { expiresIn: '30d' });
 
 module.exports = { protect, adminOnly, projectMember, projectAdmin, generateToken };

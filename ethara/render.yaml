@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: ethara-team-task-manager
+    env: node
+    plan: free
+    branch: main
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: FRONTEND_URL
+        value: https://your-render-app.onrender.com

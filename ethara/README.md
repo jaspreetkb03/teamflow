@@ -160,9 +160,22 @@ cd frontend && npm start
 3. Set env var: `REACT_APP_API_URL=https://your-railway-app.railway.app/api`
 4. Build command: `npm run build`
 
+### Full app → Render
+1. Push repo to GitHub
+2. New service on render.com → Web Service
+3. Connect GitHub repo and select this repository
+4. Set root directory to `/`
+5. Build command: `npm run build`
+6. Start command: `npm start`
+7. Set env vars:
+   - `NODE_ENV=production`
+   - `MONGODB_URI`
+   - `JWT_SECRET`
+   - `FRONTEND_URL=https://your-render-app.onrender.com`
+
 ### Database → MongoDB Atlas
 1. Create free M0 cluster at cloud.mongodb.com
-2. Whitelist `0.0.0.0/0` (allow all IPs for Railway)
+2. Whitelist `0.0.0.0/0` (allow all IPs for Render/Railway)
 3. Copy connection string → use as `MONGODB_URI`
 
 ---

@@ -183,7 +183,7 @@ function MemberModal({ project, onClose, onUpdate }) {
 export default function ProjectDetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { user, isAdmin } = useAuth();
+  const { isAdmin } = useAuth();
   const [project, setProject] = useState(null);
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
